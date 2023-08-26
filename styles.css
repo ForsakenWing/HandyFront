@@ -131,10 +131,26 @@
 
 #header-image {
     order: 2;
+
+}
+
+img {
+    overflow: clip;
+    object-fit: cover;
+    width: 100%;
 }
 
 #header-image * {
-    max-width: 100%;
+    display: inline-block;
+}
+
+#email {
+    word-wrap: break-word;
+    padding: 5px;
+}
+
+address {
+    font-size: 20px;
 }
 
 * {
