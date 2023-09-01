@@ -65,7 +65,7 @@
     display: none;
 }
 
-.navbar div {
+.nav div {
     padding: 0 14px;
     flex-grow: 1;
     flex-shrink: 0;
@@ -90,6 +90,12 @@ hr {
     border: 1px solid black;
     margin: 0 auto 16px;
     width: 50px;
+}
+
+#PageTitle a {
+    text-decoration: none;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
 }
 
 #sitewrapper {
