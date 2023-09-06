@@ -15,6 +15,8 @@
    <script src="https://code.jquery.com/jquery-2.1.0.min.js"
       integrity="sha256-8oQ1OnzE2X9v4gpRVRMb1DWHoPHJilbur1LP9ykQ9H0=" crossorigin="anonymous">
       </script>
+   <script async src="scripts/forms.js"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -29,6 +31,26 @@
 
 <body>
    <div class="wholepage">
+      <div id="QouteFormContainerOuter">
+         <form id="contact-form" style="text-align: center;">
+            <div id="InnerContainerHeader">
+               <div id="InnerContainerQoute" id="GetQouteForm"><span>Get Qoute</span></div>
+               <div id="InnerContainerCancel" class="btn cancel" role="button" onclick="closeQouteForm()"><span
+                     id="CancelForm" class="material-symbols-outlined">close</span></div>
+            </div>
+            <input type="hidden" name="contact_number">
+            <input type="text" class="input-text" placeholder="Name" autocomplete="on" maxlength="100" id="name"
+               name="user_name"></input>
+            <input name="user_phone_number" type="tel" class="input-text" placeholder="Phone number" autocomplete="on"
+               maxlength="15" id="phonenumber"></input>
+            <input type="email" name="user_email" class="input-text" id="email" placeholder="Email *" autocomplete="on"
+               required></input>
+            <textarea maxlength="1000" name="message" id="message" type="text" class="input-text"
+               placeholder="I was wondering about availability and rates. I need help with the following:"></textarea>
+            <button id="submitbtn" type="submit" class="btn">Submit</button>
+            <div id="successful-msg">Message sent. We will get back to you soon!</div>
+         </form>
+      </div>
       <div id="sitewrapper">
          <div class="header-panel">
             <div class="upper-header">
@@ -44,14 +66,14 @@
                   Opened everyday from 8AM to 6PM!
                </div>
                <div class="header-quote">
-                  <a href="#">GET QUOTE</a>
+                  <a href="#" onclick="openQouteForm()">GET QUOTE</a>
                </div>
             </div>
             <div class="lower-header">
                <picture id="header-image">
-                  <source media="(max-width: 480px)" srcset="images/header-480.jpeg">
+                  <source media="(max-width: 480px)" srcset="images/header-480.jpeg" width="480">
                   <source media="(min-width: 481px) and (max-width: 768px)" srcset="images/header-768.jpeg">
-                  <img src="images/header-1080.jpeg" alt="header-image">
+                  <img src="images/header-1080.jpeg" alt="header-image" width="1080" height="608">
                </picture>
             </div>
          </div>
@@ -75,9 +97,9 @@
       <div class="nav-wrapper top">
          <div class="navbar">
             <nav class="nav top">
-               <div class="" id="hamburger"><span class="material-symbols-outlined">menu</span></div>
+               <div class="" id="hamburger"><a href="#"><span class="material-symbols-outlined">menu</span></a></div>
                <div class="garage" id="PageTitle"><a href="">Garage door services from Elay</a></div>
-               <div class="action-list-2" id="Quotes"><a href="">
+               <div class="action-list-2" id="Quotes"><a href="#" onclick="openQouteForm()">
                      <span class="material-symbols-outlined icons">request_quote</span>
                      <span class="text">Get Qoute</span>
                   </a></div>
@@ -95,7 +117,7 @@
       </div>
       <div class="nav-wrapper bottom">
          <div class="nav bottom">
-            <div class="box"><a href="">
+            <div class="box"><a href="#" onclick="openQouteForm()">
                   <span class="material-symbols-outlined icons">request_quote</span>
                   <span class="text">Qoute</span>
                </a>
@@ -114,9 +136,7 @@
             </div>
          </div>
       </div>
-
    </div>
-   <script src="scripts/navbar.js"></script>
 </body>
 
 </html>

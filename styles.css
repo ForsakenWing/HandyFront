@@ -3,13 +3,45 @@
     src: url("fonts/LibreBaskerville-Regular.ttf");
 }
 
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Regular.ttf");
+}
+
 .icons {
-    padding: 0 12px;
+    padding: 0 1rem;
+}
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-y: scroll;
+    color: #202124;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    line-height: 1.5em;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    text-size-adjust: 100%;
+    margin: 0;
+    line-height: 1.5em;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
 }
 
 .action-list-2 span {
     position: relative;
-    font-size: 17px;
+    font-size: 1.1rem;
     overflow: hidden;
     vertical-align: middle;
     display: inline-block;
@@ -49,7 +81,7 @@
     flex-wrap: nowrap;
     white-space: nowrap;
     align-items: center;
-    padding: 0 66px 0 66px;
+    padding: 0 4.1rem 0 4.1rem;
     top: 0;
     left: 0;
     position: fixed;
@@ -57,7 +89,7 @@
     width: inherit;
     text-align: center;
     background-color: white;
-    box-shadow: 0 0 5px grey;
+    box-shadow: 0 0 0.4rem grey;
     height: inherit;
 }
 
@@ -66,7 +98,7 @@
 }
 
 .nav div {
-    padding: 0 14px;
+    padding: 0 1.2rem;
     flex-grow: 1;
     flex-shrink: 0;
 }
@@ -74,10 +106,10 @@
 #PageTitle {
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 0 20px;
+    padding: 0 1.25rem;
     position: relative;
     flex: 1;
-    font-size: 18px;
+    font-size: 1.2rem;
 }
 
 #PageTitle a {
@@ -88,7 +120,7 @@
 
 hr {
     border: 1px solid black;
-    margin: 0 auto 16px;
+    margin: 0 auto 1rem;
     width: 50px;
 }
 
@@ -99,13 +131,143 @@ hr {
 }
 
 #sitewrapper {
-    padding: 0 80px 0 80px;
+    padding: 0 5rem 0 5rem;
     min-height: 100%;
     display: block;
 }
 
+#QouteFormContainerOuter {
+    display: none;
+    position: fixed;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000000;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#InnerContainerCancel {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+#successful-msg {
+    display: none;
+}
+
+#successful-msg.show {
+    display: block;
+    z-index: 10000000;
+    background-color: #323232;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+}
+
+#contact-form.hide :not(#successful-msg) {
+    display: none;
+}
+
+#contact-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    width: 50vw;
+    max-width: 32rem;
+    background-color: white;
+    min-width: 11rem;
+}
+
+#contact-form>* {
+    width: 45vw;
+    max-width: 30rem;
+    min-width: 10rem;
+    margin: 0;
+    box-sizing: border-box;
+    margin: 0 1.5rem;
+    padding: 0.4rem;
+    text-align: left;
+}
+
+
+input:focus textarea:focus {
+    background-color: gray;
+}
+
+#contact-form>input, #contact-form>textarea {
+    border: none;
+    border-bottom: 0.1rem inset gray;
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+    height: fit-content;
+    outline: none;
+}
+
+
+
+#InnerContainerHeader {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#InnerContainerHeader > div > span {
+    margin: 0 1rem;
+    white-space: nowrap;
+}
+
+#InnerContainerHeader > div {
+    padding: 1rem 0 0 0;
+}
+
+
+
+#CancelForm {
+    font-size: 1.2rem;
+}
+
+#submitbtn {
+    margin: 1.5rem;
+    max-width: 3rem;
+    min-height: 2rem;
+    background: #4285f4;
+    border: 0;
+    text-transform: uppercase;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+#message {
+    height: 3rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-y: visible;
+    overflow-x: hidden;
+}
+
 .wholepage {
-    padding-top: 64px;
+    padding-top: 4rem;
 }
 
 .header-panel {
@@ -114,7 +276,7 @@ hr {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 128px;
+    margin-bottom: 8rem;
 }
 
 
@@ -123,43 +285,43 @@ hr {
 }
 
 .opening-hours {
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 }
 
 .header-quote a {
     background-color: rgb(72, 72, 127);
-    padding: 18px 54px;
+    padding: 1.2rem 3.5rem;
     display: inline-block;
     color: white;
     text-decoration: none;
 }
 
 #hamburger {
-    padding: 15px;
+    padding: 1rem;
     flex-grow: 0;
     flex-shrink: 1;
     color: rgb(72, 72, 127);
 }
 
 #Handy-title {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     color: rgb(72, 72, 127);
 }
 
 .upper-header {
-    margin-bottom: 80px;
-    margin-top: 80px;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
 }
 
 #Handy-title>span {
     font-family: "Libre Baskerville", serif;
-    font-size: 56px;
+    font-size: 2rem;
     font-weight: 700;
 }
 
 h2 {
-    font-size: 1em;
-    margin: 0 0 32px;
+    font-size: 1rem;
+    margin: 0 0 2rem;
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;
@@ -167,18 +329,25 @@ h2 {
 }
 
 #about-us {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
-#about-us > p {
-    padding: 25px;
+
+#about-us>p {
+    padding: 2.4rem;
+    margin: 0 5vw;
     text-align: justify;
 }
 
 @media screen and (max-width: 640px) {
 
+    html,
+    body {
+        font-size: 12px;
+    }
+
     .upper-header {
-        margin-bottom: 24px;
-        margin-top: 24px;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
     }
 
     .header-quote a {
@@ -208,14 +377,10 @@ h2 {
 
     .nav-wrapper.bottom .navbar.fixed {
         position: fixed;
-        z-index: 10000;
+        z-index: 100;
         bottom: 0;
         left: 0;
         right: 0;
-    }
-
-    #Handy-title>span {
-        font-size: 32px;
     }
 
     .nav.bottom {
@@ -248,7 +413,16 @@ h2 {
     }
 
     .nav.top {
-        padding: 0 12px;
+        padding: 0 1rem;
+    }
+
+    #InnerContainerHeader {
+        margin: 0;
+    }
+
+    #InnerContainerHeader >* {
+        text-align: left;
+        overflow: hidden;
     }
 
     .nav.bottom div.box {
@@ -263,7 +437,7 @@ h2 {
         display: flex;
         flex-direction: column;
         text-size-adjust: 100%;
-        font-size: 12px;
+        font-size: 0.75rem;
         align-items: center;
         text-decoration: none;
     }
@@ -279,11 +453,7 @@ h2 {
 
     .nav.bottom div.box span.text {
         font-weight: 700;
-        font-size: 11px;
-    }
-
-    address {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .lower-header {
@@ -293,59 +463,33 @@ h2 {
 }
 
 #header-image {
-    width: 100%;
     background-size: cover;
     box-sizing: border-box;
-
 }
 
 img {
     overflow: clip;
     object-fit: cover;
-    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 #header-image * {
-    display: block;
-    width: 100%;
+    display: inline-flex;
     height: auto;
+    align-items: center;
 }
 
 #email {
     word-wrap: break-word;
-    padding: 5px;
 }
 
 address {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-y: scroll;
-    color: #202124;
-    font-family: Helvetica,Arial,sans-serif;
-}
 
 a {
     color: rgb(72, 72, 127);
     text-decoration: none;
-}
-
-
-* {
-    margin: 0;
-    line-height: 1.5em;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-tap-highlight-color: transparent;
-    text-size-adjust: 100%;
-    margin: 0;
-    line-height: 1.5em;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
 }
