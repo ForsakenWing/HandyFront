@@ -217,7 +217,7 @@ input:focus textarea:focus {
 
 
 #InnerContainerHeader {
-    max-width: 100%;
+    max-width: 90%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -230,7 +230,6 @@ input:focus textarea:focus {
 }
 
 #InnerContainerHeader > div > span {
-    margin: 0 1rem;
     white-space: nowrap;
 }
 
@@ -342,7 +341,7 @@ h2 {
 
     html,
     body {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .upper-header {
@@ -351,11 +350,19 @@ h2 {
     }
 
     .header-quote a {
-        padding: 12px 20px;
+        padding: 0.8rem 1.5rem;
     }
 
     div.action-list-2 {
         display: none;
+    }
+
+    #contact-form {
+        width: 75vw;
+    }
+
+    #contact-form>*:not(#InnerContainerHeader) {
+        width: 90%;
     }
 
     div.action-list-2.bottom {
@@ -416,13 +423,21 @@ h2 {
         padding: 0 1rem;
     }
 
-    #InnerContainerHeader {
-        margin: 0;
-    }
-
     #InnerContainerHeader >* {
         text-align: left;
         overflow: hidden;
+    }
+
+    #InnerContainerQoute {
+        /* margin: 0 0 0 1.5rem; */
+    }
+
+    #InnerContainerCancel {
+        /* margin: 0 1.5rem 0 auto; */
+    }
+
+    #InnerContainerHeader > div > span {
+        margin: unset;
     }
 
     .nav.bottom div.box {
