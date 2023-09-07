@@ -190,7 +190,7 @@ hr {
 }
 
 #contact-form>* {
-    width: 45vw;
+    width: 90%;
     max-width: 30rem;
     min-width: 10rem;
     margin: 0;
