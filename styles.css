@@ -176,6 +176,10 @@ hr {
     display: none;
 }
 
+#contact-us {
+    display: none;
+}
+
 #contact-form {
     display: flex;
     align-items: center;
@@ -187,6 +191,32 @@ hr {
     max-width: 32rem;
     background-color: white;
     min-width: 11rem;
+}
+
+#gallery {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    box-sizing: border-box;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.gallery-blocks {
+    display: inline-block;
+    position: relative;
+    height: 30vw;
+    width: 30vw;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+.gallery-images {
+    overflow: hidden;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 #contact-form>* {
@@ -205,7 +235,9 @@ input:focus textarea:focus {
     background-color: gray;
 }
 
-#contact-form>input, #contact-form>textarea {
+#contact-form>input,
+#contact-form>textarea,
+.g-recaptcha {
     border: none;
     border-bottom: 0.1rem inset gray;
     padding-top: 1.5rem;
@@ -229,11 +261,11 @@ input:focus textarea:focus {
     text-align: center;
 }
 
-#InnerContainerHeader > div > span {
+#InnerContainerHeader>div>span {
     white-space: nowrap;
 }
 
-#InnerContainerHeader > div {
+#InnerContainerHeader>div {
     padding: 1rem 0 0 0;
 }
 
@@ -337,11 +369,32 @@ h2 {
     text-align: justify;
 }
 
-@media screen and (max-width: 640px) {
+@media (min-width: 640px) {
+
+    .gallery-blocks {
+        flex: 1 1 50%;
+        max-height: 45vw;
+        max-width: 45vw;
+    }
+}
+
+@media (min-width: 992px) {
+
+    .gallery-blocks {
+        flex: 1 1 32%
+    }
+
+
+}
+
+
+
+
+@media screen and (max-width: 640px) and (min-width: 1px) {
 
     html,
     body {
-        font-size: 14px;
+        font-size: 11px;
     }
 
     .upper-header {
@@ -350,7 +403,7 @@ h2 {
     }
 
     .header-quote a {
-        padding: 0.8rem 1.5rem;
+        padding: 1.2rem 2rem;
     }
 
     div.action-list-2 {
@@ -359,6 +412,15 @@ h2 {
 
     #contact-form {
         width: 75vw;
+    }
+
+    #gallery {
+        flex-direction: column;
+    }
+
+    .gallery-blocks {
+        width: 100%;
+        height: 30rem;
     }
 
     #contact-form>*:not(#InnerContainerHeader) {
@@ -423,20 +485,12 @@ h2 {
         padding: 0 1rem;
     }
 
-    #InnerContainerHeader >* {
+    #InnerContainerHeader>* {
         text-align: left;
         overflow: hidden;
     }
 
-    #InnerContainerQoute {
-        /* margin: 0 0 0 1.5rem; */
-    }
-
-    #InnerContainerCancel {
-        /* margin: 0 1.5rem 0 auto; */
-    }
-
-    #InnerContainerHeader > div > span {
+    #InnerContainerHeader>div>span {
         margin: unset;
     }
 
@@ -507,4 +561,12 @@ address {
 a {
     color: rgb(72, 72, 127);
     text-decoration: none;
+}
+
+@media screen and (max-width: 206px) and (min-width: 1px) {
+
+    html,
+    body {
+        font-size: 8px;
+    }
 }

@@ -6,7 +6,7 @@ function openQouteForm() {
     let form = document.getElementById("QouteFormContainerOuter");
     document.body.style.overflowY = "hidden";
     form.style.display = "flex";
-}
+};
 
 function closeQouteForm() {
     let form = document.getElementById("QouteFormContainerOuter");
@@ -22,9 +22,9 @@ window.onload = function () {
         this.contact_number.value = Math.random() * 100000 | 0;
         // these IDs from the previous steps
         emailjs.sendForm('service_b0n5sbp', 'contact_form', this)
-            .then(function() {
+            .then(function () {
                 console.log('SUCCESS!');
-            }, function(error) {
+            }, function (error) {
                 console.log('FAILED...', error);
             });
         form.classList.add("hide");
