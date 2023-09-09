@@ -1,0 +1,65 @@
+@import url("styles.css");
+
+$buttonWidth: 1.3rem;
+$buttonHeight: 0.8rem;
+$buttonColor: rgb(72, 72, 127);
+$lineThickness: 0.2rem;
+$transitionSpeed: 0.25s;
+$transitionEasing: ease-in-out;
+
+// Demo
+.menu-toggle {
+    position: relative;
+    display: block;
+    width: $buttonWidth;
+    height: $buttonHeight;
+    padding: 0.3rem;
+
+    background: transparent;
+    border-top: $lineThickness solid;
+    border-bottom: $lineThickness solid;
+
+    color: $buttonColor;
+    font-size: 0;
+
+    transition: all $transitionSpeed $transitionEasing;
+
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: $lineThickness;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        background: currentColor;
+
+        transform: translate(-50%, -50%);
+        transition: transform $transitionSpeed $transitionEasing;
+    }
+}
+
+button:hover {
+    color: lighten($buttonColor, 15%);
+}
+
+button.is-active {
+    border-color: transparent;
+
+    &:before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+}

@@ -2,6 +2,22 @@
     emailjs.init('jRbmQrEBmttvca9mu');
 })();
 
+var sidebar = $("#side-bar");
+var menutoggle = $('.menu-toggle');
+
+menutoggle.on('click', function () {
+    sidebar.transform = "unset";
+    $(this).toggleClass('is-active');
+    sidebar.toggleClass('is-active');
+});
+
+$('a.side-link').on('click', function () {
+    sidebar.transform = "unset";
+    sidebar.toggleClass('is-active');
+    menutoggle.toggleClass('is-active');
+});
+
+
 function openQouteForm() {
     let form = document.getElementById("QouteFormContainerOuter");
     document.body.style.overflowY = "hidden";
@@ -10,7 +26,7 @@ function openQouteForm() {
 
 function closeQouteForm() {
     let form = document.getElementById("QouteFormContainerOuter");
-    document.body.style.overflowY = "unset";
+    document.body.style.overflowY = "scroll";
     form.style.display = "none";
 }
 

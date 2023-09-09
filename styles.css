@@ -59,12 +59,14 @@ body {
 }
 
 .nav-wrapper {
-    display: inline-block
+    display: inline-block;
 }
 
 .nav-wrapper.top .navbar {
     width: 100%;
     position: relative;
+    height: 3rem;
+    z-index: 50;
 }
 
 .nav-wrapper.top .navbar.fixed {
@@ -176,10 +178,6 @@ hr {
     display: none;
 }
 
-#contact-us {
-    display: none;
-}
-
 #contact-form {
     display: flex;
     align-items: center;
@@ -200,6 +198,7 @@ hr {
     box-sizing: border-box;
     margin: 0 auto;
     flex-wrap: wrap;
+    margin-bottom: 2.5rem;
 }
 
 .gallery-blocks {
@@ -319,7 +318,7 @@ input:focus textarea:focus {
     margin-bottom: 1.5rem;
 }
 
-.header-quote a {
+.default-button a {
     background-color: rgb(72, 72, 127);
     padding: 1.2rem 3.5rem;
     display: inline-block;
@@ -331,7 +330,6 @@ input:focus textarea:focus {
     padding: 1rem;
     flex-grow: 0;
     flex-shrink: 1;
-    color: rgb(72, 72, 127);
 }
 
 #Handy-title {
@@ -369,7 +367,7 @@ h2 {
     text-align: justify;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 680px) {
 
     .gallery-blocks {
         flex: 1 1 50%;
@@ -390,7 +388,7 @@ h2 {
 
 
 
-@media screen and (max-width: 640px) and (min-width: 1px) {
+@media screen and (max-width: 680px) and (min-width: 1px) {
 
     html,
     body {
@@ -402,7 +400,7 @@ h2 {
         margin-top: 2rem;
     }
 
-    .header-quote a {
+    .default-button a {
         padding: 1.2rem 2rem;
     }
 
@@ -569,4 +567,69 @@ a {
     body {
         font-size: 8px;
     }
+}
+
+.side-list-item {
+    padding: 2.5rem 0 0 3.5rem;
+}
+
+.side-link {
+    padding: 1rem;
+    font-size: 1.5rem;
+    white-space: nowrap;
+}
+
+#side-bar {
+    opacity: 0;
+    position: absolute;
+    transform: translateX(-105%);
+    transition: transform 0.25s, opacity 0.25s;
+    top: 3rem;
+    left: 0;
+    right: auto;
+    box-shadow: 0 0 0.4rem grey;
+    background: white;
+    max-width: 75%;
+    height: 100%;
+    width: 15rem;
+    -webkit-transition: transform 0.25s, opacity 0.25s;
+}
+
+#side-bar.is-active {
+    transform: none;
+    opacity: 1;
+    transition: transform 0.5s, opacity 0.5s;
+    -webkit-transition: transform 0.5s, opacity 0.5s;
+}
+
+#contact-us div {
+    margin-bottom: 3rem;
+}
+
+#contact-us-map>iframe {
+    width: 100%;
+    height: 30rem;
+}
+
+#contact-us a {
+    margin-bottom: 1rem;
+}
+
+h3 {
+    margin: 0 0 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+th {
+    text-align: inherit;
+    font-weight: bold;
 }
