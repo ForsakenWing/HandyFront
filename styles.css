@@ -359,11 +359,13 @@ h2 {
 
 #about-us {
     margin-bottom: 2.5rem;
+    background-color: rgba(247, 247, 247, 0.613);
+    padding: 1rem;
+    box-sizing: border-box  ;
 }
 
 #about-us>p {
     padding: 2.4rem;
-    margin: 0 5vw;
     text-align: justify;
 }
 
@@ -380,6 +382,10 @@ h2 {
 
     .gallery-blocks {
         flex: 1 1 32%
+    }
+
+    #about-us {
+        padding: 6rem;
     }
 
 
