@@ -319,7 +319,7 @@ input:focus textarea:focus {
 }
 
 .default-button a {
-    background-color: rgb(72, 72, 127);
+    background-color: rgb(26, 200, 37);
     padding: 1.2rem 3.5rem;
     display: inline-block;
     color: white;
@@ -334,7 +334,7 @@ input:focus textarea:focus {
 
 #Handy-title {
     margin-bottom: 1rem;
-    color: rgb(72, 72, 127);
+    color: rgb(26, 200, 37);
 }
 
 .upper-header {
@@ -563,7 +563,7 @@ address {
 
 
 a {
-    color: rgb(72, 72, 127);
+    color: rgb(26, 200, 37);
     text-decoration: none;
 }
 

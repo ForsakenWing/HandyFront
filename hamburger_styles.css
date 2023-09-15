@@ -8,7 +8,7 @@
   background: transparent;
   border-top: 0.2rem solid;
   border-bottom: 0.2rem solid;
-  color: rgb(72, 72, 127);
+  color: rgb(26, 200, 37);
   font-size: 0;
   transition: all 0.25s ease-in-out;
 }
@@ -26,7 +26,7 @@
 }
 
 button:hover {
-  color: #6969aa;
+  color: #47e751;
 }
 
 button.is-active {
